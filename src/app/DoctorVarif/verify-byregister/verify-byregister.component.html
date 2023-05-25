@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<div class="container">
+  <form
+    #registration="ngForm"
+    (ngSubmit)="registration.form.valid && addDoctors(registration.value)"
+  >
+    <div class="form-group">
+      <label for="mobile">Mobile Number</label>
+      <input
+        class="form-control"
+        type="text"
+        id="mobile"
+        [(ngModel)]="form.mobile"
+        name="mobile"
+        [pattern]="integerRegex"
+        #mobile="ngModel"
+        required
+        minlength="10"
+        maxlength="10"
+        [ngClass]="{ error: mobile.errors && mobile.touched }"
+      />
+      <div *ngIf="mobile.errors && mobile.touched">
+        <small class="text-warning" *ngIf="mobile.errors['required']"
+          >Mobile field is requird</small
+        >
+
+        <small
+          class="text-warning"
+          *ngIf="
+            mobile.errors['minlength'] ||
+            mobile.errors['maxlength'] ||
+            mobile.errors['pattern']
+          "
+          >Please enter a valid mobile no.</small
+        >
+      </div>
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input
+        class="form-control"
+        type="email"
+        id="email"
+        [(ngModel)]="form.email"
+        name="email"
+        #email="ngModel"
+        [pattern]="emailRegex"
+        required
+        [ngClass]="{ error: email.errors && email.touched }"
+      />
+
+      <div *ngIf="email.errors && email.touched">
+        <small class="text-warning" *ngIf="email.errors['required']"
+          >Please check and enter a valid email address</small
+        >
+      </div>
+    </div>
+    <br />
+
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input
+        class="form-control"
+        type="text"
+        id="name"
+        [(ngModel)]="form.name"
+        name="name"
+        #name="ngModel"
+        minlength="5"
+        maxlength="15"
+        required
+      />
+    </div>
+    <br />
+
+    <div class="form-group">
+      <label for="password">Password</label>
+
+      <input
+        class="form-control"
+        type="password"
+        id="password"
+        [(ngModel)]="form.password"
+        name="password"
+        [pattern]="passwordRegex"
+        #password="ngModel"
+        required
+      />
+      <div *ngIf="password.errors && password.touched">
+        <small class="text-warning" *ngIf="password.errors['required']"
+          >Please enter password
+        </small>
+        <small class="text-warning" *ngIf="password.errors['pattern']"
+          >Please use special characters
+        </small>
+      </div>
+    </div>
+    <br />
+
+    <div class="form-group">
+      <label for="conform_password">Conform Password</label>
+      <input
+        class="form-control"
+        type="password"
+        id="conform_password"
+        [(ngModel)]="form.conform_password"
+        name="conform_password"
+        #conform_password="ngModel"
+        required
+        validateEquals="password"
+      />
+      <div *ngIf="password.errors && password.touched">
+        <small class="text-warning" *ngIf="password.errors['required']"
+          >Please enter password
+        </small>
+      </div>
+    </div>
+    <br />
+
+    <div class="form-group">
+      <label for="date">Date of Generation</label>
+      <input
+        class="form-control"
+        type="date"
+        id="date"
+        [(ngModel)]="form.date"
+        name="date"
+        #date="ngModel"
+        required
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="degree">Degree</label>
+      <input
+        class="form-control"
+        type="text"
+        id="degree"
+        [(ngModel)]="form.degree"
+        name="degree"
+        #degree="ngModel"
+        required
+      />
+    </div>
+
+    <br />
+
+    <div class="form-group">
+      <label for="fee">Online Consult Fee</label>
+      <input
+        class="form-control"
+        type="number"
+        id="fee"
+        [(ngModel)]="form.fee"
+        name="fee"
+        [pattern]="integerRegex"
+        #fee="ngModel"
+        required
+      />
+    </div>
+    <br />
+
+    <div class="form-group">
+      <label for="personalFee">In Person Consult Fee</label>
+      <input
+        class="form-control"
+        type="number"
+        id="personalFee"
+        [(ngModel)]="form.personalFee"
+        name="personalFee"
+        [pattern]="integerRegex"
+        #personalFee="ngModel"
+        required
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="submit"
+        name="submit"
+        [disabled]="registration.form.status === 'INVALID'"
+      />
+    </div>
+  </form>
+</div>
+
+<router-outlet></router-outlet>

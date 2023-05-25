@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
-import { passwordValid } from './validator/passwordValidator';
-import { DoctorserviceService } from './service/doctorservice.service';
+import { DoctorserviceService } from 'src/app/service/doctorservice.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-verify-byregister',
+  templateUrl: './verify-byregister.component.html',
+  styleUrls: ['./verify-byregister.component.css'],
 })
-export class AppComponent {
-  title = 'DoctorsRegistration';
-
+export class VerifyByregisterComponent {
   constructor(private doctorserviceService: DoctorserviceService) {}
 
   form = {
@@ -34,5 +31,9 @@ export class AppComponent {
     console.log(this.form);
   }
 
-  addDoctors() {}
+  addDoctors(data: any) {
+    this.doctorserviceService.postDoctor(data).subscribe((resp) => {
+      console.warn(resp);
+    });
+  }
 }
