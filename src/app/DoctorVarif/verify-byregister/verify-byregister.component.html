@@ -85,6 +85,8 @@
         name="password"
         [pattern]="passwordRegex"
         #password="ngModel"
+        minlength="7"
+        maxlength="16"
         required
       />
       <div *ngIf="password.errors && password.touched">
@@ -92,7 +94,7 @@
           >Please enter password
         </small>
         <small class="text-warning" *ngIf="password.errors['pattern']"
-          >Please use special characters
+          >Please use special characters A,4,#$
         </small>
       </div>
     </div>
@@ -106,14 +108,37 @@
         id="conform_password"
         [(ngModel)]="form.conform_password"
         name="conform_password"
+        [pattern]="passwordRegex"
         #conform_password="ngModel"
+        minlength="7"
+        maxlength="16"
         required
         validateEquals="password"
       />
-      <div *ngIf="password.errors && password.touched">
-        <small class="text-warning" *ngIf="password.errors['required']"
-          >Please enter password
+      <div *ngIf="conform_password.errors && conform_password.touched">
+        <small class="text-warning" *ngIf="conform_password.errors['required']"
+          >Please reenter to conform password
         </small>
+      </div>
+      <div *ngIf="conform_password.errors && conform_password.touched">
+        <small
+          class="text-warning"
+          *ngIf="
+            conform_password.errors['pattern'] &&
+            form.conform_password !== form.password
+          "
+        >
+          length 7-16, Please use A,4, special characters #$
+        </small>
+      </div>
+      <div
+        *ngIf="
+          conform_password.errors &&
+          conform_password.touched &&
+          form.conform_password !== form.password
+        "
+      >
+        <small class="text-warning">Password must match </small>
       </div>
     </div>
     <br />
