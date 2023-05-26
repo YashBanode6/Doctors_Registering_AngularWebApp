@@ -16,3 +16,9 @@
 .text-warning {
   color: red;
 }
+
+.checkInput {
+  position: relative;
+  left: 158px;
+  bottom: 20px;
+}

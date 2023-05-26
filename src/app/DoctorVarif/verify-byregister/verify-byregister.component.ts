@@ -9,6 +9,16 @@ import { DoctorserviceService } from 'src/app/service/doctorservice.service';
 export class VerifyByregisterComponent {
   constructor(private doctorserviceService: DoctorserviceService) {}
 
+  public inputType: string = 'password';
+
+  public showPassword(event: any): void {
+    if (event.target.checked) {
+      this.inputType = 'text';
+    } else {
+      this.inputType = 'password';
+    }
+  }
+
   form = {
     mobile: '',
     email: '',

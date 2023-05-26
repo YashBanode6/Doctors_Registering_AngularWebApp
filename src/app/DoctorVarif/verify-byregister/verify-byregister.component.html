@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
 <div class="container">
   <form
     #registration="ngForm"
@@ -75,11 +81,11 @@
     <br />
 
     <div class="form-group">
-      <label for="password">Password</label>
+      <label for="password">Password </label>
 
       <input
         class="form-control"
-        type="password"
+        [type]="inputType"
         id="password"
         [(ngModel)]="form.password"
         name="password"
@@ -88,6 +94,11 @@
         minlength="7"
         maxlength="16"
         required
+      />
+      <input
+        type="checkbox"
+        class="checkInput"
+        (change)="showPassword($event)"
       />
       <div *ngIf="password.errors && password.touched">
         <small class="text-warning" *ngIf="password.errors['required']"
