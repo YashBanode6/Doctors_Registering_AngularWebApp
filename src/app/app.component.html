@@ -1,46 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-  <header class="dash"></header>
-  <body>
-    <div class="container">
-      <div>
-        <nav>
-          <a
-            class="button"
-            routerLink="/register"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-          >
-            <button>Register Doctors</button>
-          </a>
-        </nav>
-      </div>
-      <div>
-        <a
-          class="button"
-          routerLink="/login"
-          routerLinkActive="activebutton"
-          ariaCurrentWhenActive="page"
-        >
-          <button>Login</button>
-        </a>
-      </div>
-    </div>
-  </body>
-
-  <nav>
+<!-- <nav>
     |
     <a
       class="button"
-      routerLink="/details"
+      routerLink="/home"
       routerLinkActive="activebutton"
       ariaCurrentWhenActive="page"
     >
-      <button>Details</button>
+      <button>Home</button>
     </a>
-  </nav>
+  </nav> -->
 
-  <body></body>
-</html>
+<!-- <a
+      class="button"
+      routerLink="/register"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+    > </a> -->
+<button class="button" routerLink="/register">Register Doctors</button>
+
+<!-- <a> </a> -->
+<button
+  class="button"
+  routerLink="/login"
+  routerLinkActive="activebutton"
+  ariaCurrentWhenActive="page"
+>
+  Login
+</button>
+
+<!-- <a
+    class="button"
+    routerLink="/details"
+    routerLinkActive="activebutton"
+    ariaCurrentWhenActive="page"
+  > -->
+<button
+  class="button"
+  routerLink="/details"
+  routerLinkActive="activebutton"
+  ariaCurrentWhenActive="page"
+>
+  Details
+</button>
+<!-- </a> -->
 
 <router-outlet></router-outlet>

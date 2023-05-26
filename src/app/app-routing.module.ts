@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './DoctorLogin/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: AppComponent, pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'home', component: AppComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'register', component: VerifyByregisterComponent },
   { path: 'details', component: RegisterComponent },
   { path: 'login', component: LoginComponent },

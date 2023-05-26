@@ -1,9 +1,12 @@
 <div class="container">
-  <form>
-    <div class="container">
-      <div>
-        <label>Username : </label>
+  <div class="inlinContainer">
+    <h1>Login Page</h1>
+    <form>
+      <br /><br />
+      <div class="form-group">
+        <label> <b>Username : </b> </label>
         <input
+          class="form-control"
           type="text"
           placeholder="Enter Username"
           name="username"
@@ -11,18 +14,26 @@
         />
       </div>
       <br />
-      <div>
-        <label>Password : </label>
+      <div class="form-group">
+        <label><b>Password : </b> </label>
         <input
+          class="form-control"
           type="password"
           placeholder="Enter Password"
           name="password"
           required
         />
       </div>
-      <button type="submit">Login</button>
-      <input type="checkbox" /> Remember me
-      <button type="button" class="cancelbtn">Cancel</button>
-    </div>
-  </form>
+      <br />
+      <input type="checkbox" /> Remember me <br /><br /><br />
+      <div>
+        <input
+          class="col-6 offset-3"
+          type="submit"
+          name="submit"
+          style="width: 250px; color: rgb(87, 142, 168); padding: 4px"
+        />
+      </div>
+    </form>
+  </div>
 </div>
