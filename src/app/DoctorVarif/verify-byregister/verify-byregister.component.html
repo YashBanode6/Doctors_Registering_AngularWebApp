@@ -151,6 +151,11 @@
         >required min length 8</small
       >
     </div>
+    <div
+      *ngIf="registerForm.errors?.['passwordMisMatchError'] && getControl('confirm_password')?.touched"
+    >
+      <small>Password mismatched</small>
+    </div>
     <br />
     <div>
       <label for="email">Email</label>

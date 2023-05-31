@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { DoctorserviceService } from 'src/app/service/doctorservice.service';
 import { passwordValid } from 'src/app/validator/passwordValidator';
@@ -32,44 +38,44 @@ export class VerifyByregisterComponent {
     }
   }
 
-  registerForm = this.builder.group(
+  registerForm = new FormGroup(
     {
-      id: this.builder.control('', Validators.required),
-      mobile: this.builder.control('', [
+      id: new FormControl('', Validators.required),
+      mobile: new FormControl('', [
         Validators.required,
         Validators.minLength(10),
         Validators.maxLength(10),
         Validators.pattern(this.integerRegex),
       ]),
-      name: this.builder.control('', [
+      name: new FormControl('', [
         Validators.required,
         Validators.maxLength(15),
         Validators.minLength(6),
       ]),
-      password: this.builder.control('', [
+      password: new FormControl('', [
         Validators.required,
         Validators.pattern(
           '^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$'
         ),
         Validators.minLength(8),
       ]),
-      confirm_password: this.builder.control('', [
+      confirm_password: new FormControl('', [
         Validators.required,
         Validators.pattern(
           '^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$'
         ),
         Validators.minLength(8),
       ]),
-      email: this.builder.control('', [
+      email: new FormControl('', [
         Validators.required,
         Validators.email,
         Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
       ]),
 
-      generationDate: this.builder.control('', Validators.required),
-      consultFeeOnline: this.builder.control('', Validators.required),
-      offlineFee: this.builder.control('', Validators.required),
-      degree: this.builder.control('', Validators.required),
+      generationDate: new FormControl('', Validators.required),
+      consultFeeOnline: new FormControl('', Validators.required),
+      offlineFee: new FormControl('', Validators.required),
+      degree: new FormControl('', Validators.required),
     },
     [passwordValid('password', 'confirm_password')]
   );
