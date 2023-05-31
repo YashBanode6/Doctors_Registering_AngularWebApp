@@ -7,7 +7,7 @@
 </head>
 <div class="container">
   <form [formGroup]="registerForm" (ngSubmit)="proceedregistration()">
-    <div>
+    <div class="headreg">
       <h1>Register Form</h1>
     </div>
 
@@ -289,12 +289,14 @@
       >
     </div>
     <br />
-    <button style="color: rgb(41, 81, 81)">Register</button> &nbsp;&nbsp; &nbsp;
-    &nbsp;
+    <button style="background-color: rgb(41, 81, 81)">Register</button>
+    &nbsp;&nbsp; &nbsp; &nbsp;
 
-    <a routerLink="/login" style="color: #1b61a7"
-      ><button>Back to login</button></a
+    <a routerLink="/login"
+      ><button style="background-color: #1b61a7">Back to login</button></a
     >
+
+    <div style="padding-bottom: 10px"></div>
   </form>
 </div>
 
