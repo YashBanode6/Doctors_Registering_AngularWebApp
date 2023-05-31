@@ -18,7 +18,6 @@ import { passwordValid } from 'src/app/validator/passwordValidator';
 export class VerifyByregisterComponent {
   constructor(
     private doctorserviceService: DoctorserviceService,
-    private builder: FormBuilder,
     private router: Router
   ) {}
 
@@ -98,7 +97,7 @@ export class VerifyByregisterComponent {
         .postDoctor(this.registerForm.value)
         .subscribe((resp) => {
           console.warn(resp);
-          this.router.navigate(['login']);
+          this.router.navigate(['thankspage']);
         });
     } else {
       alert('Please enter valid data');

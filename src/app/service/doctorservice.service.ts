@@ -8,8 +8,14 @@ import { Observable } from 'rxjs';
 export class DoctorserviceService {
   constructor(private http: HttpClient) {}
 
+  url = 'http://localhost:3000/doctors';
+
   getDoctorDetails() {
     return this.http.get<any>('http://localhost:3000/doctors');
+  }
+
+  getById(id: any) {
+    return this.http.get<any>(this.url + '/' + id);
   }
 
   postDoctor(dataValue: any): Observable<any> {

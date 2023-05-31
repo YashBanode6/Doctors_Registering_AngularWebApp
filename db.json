@@ -71,6 +71,42 @@
       "consultFeeOnline": 4520,
       "offlineFee": 10000,
       "degree": "MBBS, MCA"
+    },
+    {
+      "id": "Maya63",
+      "mobile": "6547884154",
+      "name": "Dr. Maya Shri",
+      "password": "Maya@345",
+      "confirm_password": "Maya@345",
+      "email": "dr5maya@gmail.com",
+      "generationDate": "2023-05-06",
+      "consultFeeOnline": 800,
+      "offlineFee": 2500,
+      "degree": "MSBS"
+    },
+    {
+      "id": "Naia",
+      "mobile": "9878967854",
+      "name": "Dr. Niana",
+      "password": "Niana@456",
+      "confirm_password": "Niana@456",
+      "email": "niana@dr.com",
+      "generationDate": "2023-05-04",
+      "consultFeeOnline": 4500,
+      "offlineFee": 15000,
+      "degree": "Farma Specialist"
+    },
+    {
+      "id": "as65",
+      "mobile": "8521478569",
+      "name": "KO. LOasm",
+      "password": "Loasm@66",
+      "confirm_password": "Loasm@66",
+      "email": "lo@gmail.com",
+      "generationDate": "2023-05-01",
+      "consultFeeOnline": 4800,
+      "offlineFee": 12000,
+      "degree": "Bone Sergen"
     }
   ],
   "comments": [
