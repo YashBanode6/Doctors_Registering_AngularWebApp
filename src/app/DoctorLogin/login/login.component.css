@@ -3,6 +3,11 @@
   justify-content: center;
   background-color: seashell;
 }
+.labletag {
+  display: flex;
+  justify-content: center;
+  background: rgb(64, 135, 146);
+}
 
 .inlinContainer {
   justify-content: center;
@@ -14,6 +19,7 @@
   width: 238px;
 }
 form {
+  padding: 10px;
   width: 250px;
   height: 400px;
   background-color: rgb(106, 167, 167);

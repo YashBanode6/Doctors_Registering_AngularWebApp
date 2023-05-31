@@ -6,20 +6,32 @@
 form {
   background-color: rgb(138, 138, 107);
   width: 250px;
-  height: 700px;
+  height: 100%;
   padding-left: 10px;
 }
 
 .form-control {
   display: flex;
   justify-content: center;
+
   padding-left: 4px;
   padding-right: 4px;
   width: 220px;
 }
-
+input {
+  border-radius: 10px;
+  padding: 5px;
+  width: 200px;
+  height: 15px;
+}
 .error {
   border: 1px solid red;
+}
+small {
+  color: red;
+}
+label {
+  padding-top: 10px;
 }
 
 .text-warning {
