@@ -9,9 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './Registrstion/register/register.component';
 import { VerifyByregisterComponent } from './DoctorVarif/verify-byregister/verify-byregister.component';
 import { LoginComponent } from './DoctorLogin/login/login.component';
+import { GratitudepageComponent } from './thankyoupage/gratitudepage/gratitudepage.component';
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, VerifyByregisterComponent, LoginComponent],
+  declarations: [AppComponent, RegisterComponent, VerifyByregisterComponent, LoginComponent, GratitudepageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

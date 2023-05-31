@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { passwordValid } from './validator/passwordValidator';
 import { DoctorserviceService } from './service/doctorservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,29 +11,17 @@ import { DoctorserviceService } from './service/doctorservice.service';
 export class AppComponent {
   title = 'DoctorsRegistration';
 
-  constructor(private doctorserviceService: DoctorserviceService) {}
+  ismenurequired = false;
 
-  form = {
-    mobile: '',
-    email: '',
-    name: '',
-    password: '',
-    conform_password: '',
-    date: '',
-    degree: '',
-    fee: '',
-    personalFee: '',
-  };
+  constructor(private route: Router) {}
 
-  integerRegex = /^\d+$/;
-  emailRegex =
-    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-  passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
-
-  registerUser() {
-    console.log(this.form);
+  ngDoCheck(): void {
+    let currentroute = this.route.url;
+    // let role = sessionStorage.getItem('role');
+    if (currentroute == '/login' || currentroute == '/register') {
+      this.ismenurequired = false;
+    } else {
+      this.ismenurequired = true;
+    }
   }
-
-  addDoctors() {}
 }

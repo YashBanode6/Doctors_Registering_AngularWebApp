@@ -45,7 +45,6 @@ export class VerifyByregisterComponent {
         Validators.required,
         Validators.minLength(10),
         Validators.maxLength(10),
-        Validators.pattern(this.integerRegex),
       ]),
       name: new FormControl('', [
         Validators.required,
