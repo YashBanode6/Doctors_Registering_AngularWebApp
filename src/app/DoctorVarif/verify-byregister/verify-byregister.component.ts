@@ -99,10 +99,10 @@ export class VerifyByregisterComponent {
         .postDoctor(this.registerForm.value)
         .subscribe((resp) => {
           console.warn(resp);
-          this.router.navigate(['Login']);
+          this.router.navigate(['login']);
         });
     } else {
-      console.warn('Please enter valid data');
+      alert('Please enter valid data');
     }
   }
 

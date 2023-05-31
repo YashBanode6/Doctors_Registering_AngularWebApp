@@ -47,6 +47,30 @@
       "degree": "B.Form",
       "fee": "600",
       "personalFee": "1200"
+    },
+    {
+      "id": "Mikel66",
+      "mobile": "8755558451",
+      "name": "Dr.Mikel Jorden",
+      "password": "Mikel@123",
+      "confirm_password": "Mikel@123",
+      "email": "mikdr@gmail.com",
+      "generationDate": "2023-03-17",
+      "consultFeeOnline": 600,
+      "offlineFee": 2500,
+      "degree": "MBBS, AIR"
+    },
+    {
+      "id": "Jaya11",
+      "mobile": "9845458785",
+      "name": "Dr. Jaya Bhanu",
+      "password": "Jaya@121",
+      "confirm_password": "Jaya@121",
+      "email": "jayadr11@gmail.com",
+      "generationDate": "2023-05-05",
+      "consultFeeOnline": 4520,
+      "offlineFee": 10000,
+      "degree": "MBBS, MCA"
     }
   ],
   "comments": [
