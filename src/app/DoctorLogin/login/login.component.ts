@@ -18,7 +18,7 @@ export class LoginComponent {
   }
 
   userdata: any = [];
-  userlogin = new FormGroup({
+  userlogin = this.builder.group({
     id: this.builder.control('', Validators.required),
     password: this.builder.control('', Validators.required),
   });
@@ -27,14 +27,15 @@ export class LoginComponent {
     if (this.userlogin.valid) {
       this.doctorservice.getById(this.userlogin.value.id).subscribe((resp) => {
         this.userdata = resp;
-        console.log(this.userdata);
 
         if (this.userdata.password === this.userlogin.value.password) {
           sessionStorage.setItem('username', this.userdata.id);
           sessionStorage.setItem('userrole', this.userdata.degree);
-          this.router.navigate(['']);
+          console.log(this.userdata);
+          this.router.navigate(['details']);
         } else {
           alert('invalid username/password, try again');
+          this.router.navigate(['/register']);
         }
       });
     }

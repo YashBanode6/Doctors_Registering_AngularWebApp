@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <table class="table">
     <thead>
       <tr>
@@ -19,12 +19,18 @@
         <td>{{ d.mobile }}</td>
         <td>{{ d.email }}</td>
         <td>{{ d.name }}</td>
-        <td>{{ d.date }}</td>
+        <td>{{ d.generationDate }}</td>
         <td>{{ d.degree }}</td>
-        <td>{{ d.fee }}</td>
-        <td>{{ d.personalFee }}</td>
+        <td>{{ d.consultFeeOnline }}</td>
+        <td>{{ d.offlineFee }}</td>
         <td>
-          <button type="submit" (click)="deleteData(d.id)">Delete</button>
+          <button
+            type="submit"
+            style="background: blanchedalmond"
+            (click)="deleteData(d.id)"
+          >
+            Delete
+          </button>
         </td>
       </tr>
     </tbody>

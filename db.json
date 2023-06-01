@@ -1,54 +1,6 @@
 {
   "doctors": [
     {
-      "id": 1,
-      "mobile": "8759468213",
-      "email": "drriy15@gmail.com",
-      "name": "Dr.Riya Shah",
-      "password": "Oasij@451184",
-      "conform_password": "Oasij@451184",
-      "date": "2023-05-12",
-      "degree": "MBBS",
-      "fee": "48648",
-      "personalFee": "48448"
-    },
-    {
-      "id": 2,
-      "mobile": "6999414401",
-      "email": "deshyam@gmail.com",
-      "name": "Dr.Shyam Sinha ",
-      "password": "sShyam@125",
-      "conform_password": "sShyam@125",
-      "date": "2021-01-01",
-      "degree": "BAMS",
-      "fee": "8946",
-      "personalFee": "15000"
-    },
-    {
-      "id": 3,
-      "mobile": "7415285110",
-      "email": "drRaya@gmail.com",
-      "name": "Dr.Raya Parag",
-      "password": "Raya@2231",
-      "conform_password": "Raya@2231",
-      "date": "2015-02-20",
-      "degree": "MBBS",
-      "fee": "1500",
-      "personalFee": "5000"
-    },
-    {
-      "id": 4,
-      "mobile": "4185278963",
-      "email": "Dhyande@gmail.com",
-      "name": "Dr.Dhyan Chand",
-      "password": "C#$44asx",
-      "conform_password": "C#$44asx",
-      "date": "2016-04-12",
-      "degree": "B.Form",
-      "fee": "600",
-      "personalFee": "1200"
-    },
-    {
       "id": "Mikel66",
       "mobile": "8755558451",
       "name": "Dr.Mikel Jorden",
