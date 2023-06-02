@@ -38,14 +38,19 @@ label {
   color: red;
 }
 
-.checkInput {
+/* .checkInput {
   position: relative;
   left: 200px;
   bottom: 20px;
-}
+} */
 .headreg {
   background: rgb(84, 34, 34);
   color: aliceblue;
   padding: 15px;
   padding-right: 5px;
+}
+.passeye {
+  position: relative;
+  left: 200px;
+  bottom: 23px;
 }

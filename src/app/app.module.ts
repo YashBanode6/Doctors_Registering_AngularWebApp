@@ -10,9 +10,10 @@ import { RegisterComponent } from './Registrstion/register/register.component';
 import { VerifyByregisterComponent } from './DoctorVarif/verify-byregister/verify-byregister.component';
 import { LoginComponent } from './DoctorLogin/login/login.component';
 import { GratitudepageComponent } from './thankyoupage/gratitudepage/gratitudepage.component';
+import { CardComponent } from './persondetail/card/card.component';
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, VerifyByregisterComponent, LoginComponent, GratitudepageComponent],
+  declarations: [AppComponent, RegisterComponent, VerifyByregisterComponent, LoginComponent, GratitudepageComponent, CardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

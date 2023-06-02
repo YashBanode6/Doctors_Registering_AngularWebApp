@@ -91,7 +91,7 @@
     <div>
       <label for="password">Password</label>
       <input
-        type="password"
+        [type]="changetype ? 'password' : 'text'"
         id="password"
         class="form-control"
         formControlName="password"
@@ -100,7 +100,14 @@
             getControl('password')?.errors && getControl('password')?.touched
         }"
       />
+      <span class="passeye" (click)="viewpassword()"
+        ><i
+          [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'"
+          id="togglePassword"
+        ></i
+      ></span>
     </div>
+    <!-- <div></div> -->
     <div
       *ngIf="getControl('password')?.errors && getControl('password')?.touched"
     >

@@ -21,11 +21,19 @@ export class VerifyByregisterComponent {
     private router: Router
   ) {}
 
-  integerRegex = /^\d+$/;
-  emailRegex =
-    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  changetype: boolean = true;
+  visible: boolean = true;
 
-  passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+  viewpassword() {
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
+  }
+
+  integerRegex = /^\d+$/;
+  // emailRegex =
+  //   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  // passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 
   public inputType: string = 'password';
 
