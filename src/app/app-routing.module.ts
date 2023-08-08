@@ -5,6 +5,7 @@ import { VerifyByregisterComponent } from './DoctorVarif/verify-byregister/verif
 import { AppComponent } from './app.component';
 import { LoginComponent } from './DoctorLogin/login/login.component';
 import { GratitudepageComponent } from './thankyoupage/gratitudepage/gratitudepage.component';
+import { CardComponent } from './persondetail/card/card.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'details', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'thankspage', component: GratitudepageComponent },
+  { path: 'usercard', component: CardComponent },
 ];
 
 @NgModule({

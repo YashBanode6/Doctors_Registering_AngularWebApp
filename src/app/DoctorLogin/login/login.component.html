@@ -1,3 +1,7 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 <div class="container">
   <div class="inlinContainer">
     <form [formGroup]="userlogin" (ngSubmit)="proceedLogin()">
@@ -40,13 +44,19 @@
           formControlName="password"
           required
         />
+        <span class="passeye" (click)="viewpassword()"
+          ><i
+            [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'"
+            id="togglePassword"
+          ></i
+        ></span>
       </div>
       <br />
       <input type="checkbox" /> Remember me <br /><br /><br />
       <div>
         <button
           (click)="proceedLogin()"
-          style="width: 250px; background: rgb(87, 142, 168); padding: 4px"
+          style="width: 210px; background: rgb(87, 142, 168); padding: 4px;"
         >
           Login
         </button>
@@ -55,7 +65,7 @@
       <div>
         <a routerLink="/register" mat-button color="accent"
           ><button
-            style="width: 250px; background: rgb(87, 142, 168); padding: 4px"
+            style="width: 210px; background: rgb(87, 142, 168); padding: 4px"
           >
             Register
           </button></a

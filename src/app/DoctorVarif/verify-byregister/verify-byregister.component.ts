@@ -35,16 +35,6 @@ export class VerifyByregisterComponent {
 
   // passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 
-  public inputType: string = 'password';
-
-  public showPassword(event: any): void {
-    if (event.target.checked) {
-      this.inputType = 'text';
-    } else {
-      this.inputType = 'password';
-    }
-  }
-
   registerForm = new FormGroup(
     {
       id: new FormControl('', Validators.required),

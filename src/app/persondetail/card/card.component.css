@@ -1,0 +1,51 @@
+/* Adjust to your preferred height */
+
+/* Adjust to your card's width */
+
+
+/* .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  align-items: center;
+  height: 140vh; 
+  gap: 20px;
+  
+}
+
+.card {
+  width: 100%; /* Cards will expand to fill the available space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+.card-body {
+  margin-top: 10px;
+}
+.card img {
+  max-width: 100%; /* Ensure the image fits within the card */
+  max-height: 100%;
+}

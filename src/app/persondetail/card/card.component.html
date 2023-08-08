@@ -1,1 +1,50 @@
-<p>card works!</p>
+<!-- 
+
+<div class="table">
+  <div class="container">
+<div class="row">
+  <div class="col-3" >
+    <div class="row card " *ngFor="let d of personDetail">
+      <div class="card-header">Doctor View</div>
+      <div class="card-body" >
+        
+       <div>ID: {{d.id}}</div>
+       <div>Name: {{d.name}}</div>
+       <div>Email: {{d.email}}</div>
+       <div> </div>
+
+      </div>
+      <div class="cardfooter"> Ok</div>
+    </div>
+  </div>
+</div>
+</div>
+</div> -->
+
+<div class="card-container">
+  <div class="card" *ngFor="let item of personDetail">
+    <div class="card-header">
+      Doctor Details
+    </div>
+    
+    <div class="card-body">
+      <div >
+        <figure>
+          <img
+            src="assets/images/DOc.png"
+            alt="doctor"
+            width="50"
+            length="50"
+          />
+        </figure>
+      </div>
+     <div></div>
+     <div>Name: {{ item.name }}</div>
+     <div>Email: {{ item.email }}</div>
+     <div>Mobile: {{ item.mobile }}</div>
+     <div>O/lFee: {{ item.consultFeeOnline }}</div>
+     <div>offlineFee: {{ item.offlineFee }}</div>
+     <div>Degree: {{ item.degree }}</div>
+    </div>
+  </div>
+</div>

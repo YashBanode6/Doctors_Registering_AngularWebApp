@@ -40,4 +40,14 @@ export class LoginComponent {
       });
     }
   }
+
+  /////////////    Password Show And Hide ////////////////////
+
+  changetype: boolean = true;
+  visible: boolean = true;
+
+  viewpassword() {
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
+  }
 }
