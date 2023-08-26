@@ -32,7 +32,7 @@ export class LoginComponent {
           sessionStorage.setItem('username', this.userdata.id);
           sessionStorage.setItem('userrole', this.userdata.degree);
           console.log(this.userdata);
-          this.router.navigate(['details']);
+          this.router.navigate(['usercard']);
         } else {
           alert('invalid username/password, try again');
           this.router.navigate(['/register']);

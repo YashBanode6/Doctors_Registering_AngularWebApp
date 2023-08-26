@@ -1,6 +1,6 @@
 .container{
 
-    background-image: url('../../../assets\images\DoctorImg11.jpg');
+    background-image: url('../../../assets/images/DoctorImg11.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -13,7 +13,7 @@
 }
 
 .inlinContainer{
-  width: 300px;
+  width: 350px;
   padding: 30px ;
   border-radius: 15px ;
   border: 1px solid black;
@@ -55,66 +55,9 @@ form {
   gap: 10px; 
 }
 
-/* .image-container {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 20px;
-}
 
-.image-container img {
-  max-width: 100%;
-  max-height: 100%;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .container {
-  display: flex;
+.buttonContainer {
+  display: grid;
   justify-content: center;
-  background-color: seashell;
+  margin-top: 10px; /* Add some spacing between buttons and form */
 }
-.labletag {
-  display: flex;
-  justify-content: center;
-  background: rgb(86, 65, 65);
-  color: white;
-}
-
-.inlinContainer {
-  justify-content: center;
-}
-.form-control {
-  padding: 4px;
-  display: flex;
-  justify-content: center;
-  width: 238px;
-}
-form {
-  padding: 10px;
-  width: 250px;
-  height: 600px;
-  background-color: rgb(119, 77, 77);
-}
-input {
-  border: 2px;
-}
-label {
-  color: aliceblue;
-}*/

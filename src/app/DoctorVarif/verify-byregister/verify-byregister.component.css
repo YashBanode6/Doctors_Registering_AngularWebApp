@@ -1,22 +1,32 @@
+
 .container{
 
-  background-image: url('../../../assets\images\RegisterPageImg.jpg');
+  /* background-image: url('../../../assets/images/RegisterPageImg.jpg'); Set the path to your image 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+
+  background-image: url('../../../assets/images/DoctorImg11.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
+  max-width: 100vh;
+  margin: 0 auto;
   padding: 20px;
   display: grid;
   place-items: center;
-  height: 90vh;
+ 
 }
 
 
 
 .formAlign{
+
   width: 500px;
-  padding: 30px ;
-  border-radius: none ;
+  padding: 20px ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px ;
   border: 1px solid black;
   background-color: #ffffff;
   
@@ -77,65 +87,19 @@ button{
   
 }
 
-.buttongap{
+.buttonContainer {
+  display: grid;
+  justify-content: center;
+  margin-top: 10px; /* Add some spacing between buttons and form */
+}
+
+/* .buttongap{
   margin-top: 20px;
 }
 
 .btn-primary:hover {
   background-color: #0056b3;
-}
-
-
-
-/* .container {
-  display: flex;
-  justify-content: center;
-  background-color: seashell;
-}
-form {
-  background-color: rgb(138, 138, 107);
-  width: 250px;
-  height: 100%;
-  padding-left: 10px;
-}
-
-.form-control {
-  display: flex;
-  justify-content: center;
-
-  padding-left: 4px;
-  padding-right: 4px;
-  width: 220px;
-}
-input {
-  border-radius: 10px;
-  padding: 5px;
-  width: 200px;
-  height: 15px;
-}
-.error {
-  border: 1px solid red;
-}
-small {
-  color: red;
-}
-label {
-  padding-top: 10px;
-}
-
-.text-warning {
-  color: red;
-}
-
-
-.headreg {
-  background: rgb(84, 34, 34);
-  color: aliceblue;
-  padding: 15px;
-  padding-right: 5px;
-}
-.passeye {
-  position: relative;
-  left: 200px;
-  bottom: 23px;
 } */
+
+
+

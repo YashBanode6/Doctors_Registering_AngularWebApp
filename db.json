@@ -47,6 +47,18 @@
       "consultFeeOnline": 4800,
       "offlineFee": 12000,
       "degree": "Bone Sergen"
+    },
+    {
+      "id": "ShyamNarayan",
+      "mobile": "7846788778",
+      "name": "Dr Shayam Naran",
+      "password": "Shyam@123",
+      "confirm_password": "Shyam@123",
+      "email": "shyam@gmail.com",
+      "generationDate": "2015-03-11",
+      "consultFeeOnline": 1000,
+      "offlineFee": 5000,
+      "degree": "MBS"
     }
   ],
   "comments": [
