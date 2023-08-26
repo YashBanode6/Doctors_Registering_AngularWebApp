@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DoctorserviceService } from 'src/app/service/doctorservice.service';
+import { GoogleApiService } from 'src/app/service/google-api.service';
 import { passwordValid } from 'src/app/validator/passwordValidator';
 
 @Component({
@@ -18,7 +19,8 @@ import { passwordValid } from 'src/app/validator/passwordValidator';
 export class VerifyByregisterComponent {
   constructor(
     private doctorserviceService: DoctorserviceService,
-    private router: Router
+    private router: Router,
+   
   ) {}
 
   changetype: boolean = true;

@@ -6,12 +6,13 @@
   />
 </head>
 <div class="container">
+  <div class="formAlign">
   <form [formGroup]="registerForm" (ngSubmit)="proceedregistration()">
     <div class="headreg">
       <h1>Register Form</h1>
     </div>
 
-    <div>
+    <div class="form-group">
       <label for="id">Username</label>
       <input
         type="text"
@@ -32,7 +33,7 @@
       >
     </div>
     <br />
-    <div>
+    <div class="form-group">
       <label for="mobile">Mobile Number</label>
       <input
         type="text"
@@ -63,7 +64,7 @@
       >
     </div>
     <br />
-    <div>
+    <div class="form-group">
       <label for="name">Full Name</label>
       <input
         type="text"
@@ -88,7 +89,7 @@
       >
     </div>
     <br />
-    <div>
+    <div class="form-group">
       <label for="password">Password</label>
       <input
         [type]="changetype ? 'password' : 'text'"
@@ -101,11 +102,15 @@
         }"
       />
       <span class="passeye" (click)="viewpassword()"
-        ><i
+        >
+        
+        <!-- This eye tag is use for putting eye icon using css and eye icon itself(externall without using bootstrap)
+          
+          <i
           [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'"
           id="togglePassword"
         ></i
-      ></span>
+      >--></span>
     </div>
     <!-- <div></div> -->
     <div
@@ -125,7 +130,7 @@
       >
     </div>
     <br />
-    <div>
+    <div class="form-group">
       <label for="confirm_password">Confirm Password</label>
       <input
         type="password"
@@ -164,7 +169,7 @@
       <small>Password mismatched</small>
     </div>
     <br />
-    <div>
+    <div class="form-group">
       <label for="email">Email</label>
       <input
         type="email"
@@ -191,7 +196,7 @@
     </div>
 
     <br />
-    <div>
+    <div class="form-group">
       <label for="generationDate">Generation Date</label>
       <input
         type="date"
@@ -219,7 +224,7 @@
       >
     </div>
     <br />
-    <div>
+    <div class="form-group">
       <label for="degree">Degree</label>
       <input
         type="text"
@@ -240,7 +245,7 @@
       >
     </div>
     <br />
-    <div>
+    <div class="form-group">
       <label for="consultFeeOnline">Consult Fee Online</label>
       <input
         type="number"
@@ -268,7 +273,7 @@
       >
     </div>
     <br />
-    <div>
+    <div class="form-group">
       <label for="offlineFee">offlineFee</label>
       <input
         type="number"
@@ -296,15 +301,16 @@
       >
     </div>
     <br />
-    <button style="background-color: rgb(41, 81, 81)">Register</button>
+    <button class="buttongap" style="width: 210px; background: rgb(87, 142, 168); padding: 4px">Register</button>
     &nbsp;&nbsp; &nbsp; &nbsp;
-
+<br><br>
     <a routerLink="/login"
-      ><button style="background-color: #1b61a7">Back to login</button></a
+      ><button class="buttongap" style="width: 210px; background: rgb(87, 142, 168); padding: 4px">Back to login</button></a
     >
 
     <div style="padding-bottom: 10px"></div>
   </form>
+</div>
 </div>
 
 <!-- <router-outlet></router-outlet> -->

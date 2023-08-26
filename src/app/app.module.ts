@@ -11,6 +11,7 @@ import { VerifyByregisterComponent } from './DoctorVarif/verify-byregister/verif
 import { LoginComponent } from './DoctorLogin/login/login.component';
 import { GratitudepageComponent } from './thankyoupage/gratitudepage/gratitudepage.component';
 import { CardComponent } from './persondetail/card/card.component';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 @NgModule({
   declarations: [AppComponent, RegisterComponent, VerifyByregisterComponent, LoginComponent, GratitudepageComponent, CardComponent],
@@ -20,6 +21,7 @@ import { CardComponent } from './persondetail/card/card.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
